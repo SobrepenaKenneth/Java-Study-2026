@@ -10,8 +10,9 @@ public class Array {
 		//arrayBasics();
 		//accessingValue();
 		//readingInputs();
-//		linearSearch();
-		linearSearch2();
+		//linearSearch();
+		//linearSearch2();
+		binarySearchAttempt();
 	}
 	
 	public static void arrayBasics() {
@@ -144,6 +145,28 @@ public class Array {
 			} else {
 				System.out.println("The number is not present in the array!");
 			}
+		}
+	}
+	
+	// my first attempt based on definition on how it works
+	public static void binarySearchAttempt() {
+		int[] numberList = {1, 5, 2, 7, 4, 8, 6, 3, 9, 10};
+		int search = 3; // the number we are going to find
+		int low = 0;
+		int high = numberList.length;
+		boolean searching = true;
+		
+		while (low <= high) {
+			int mid = (low + high) / 2;
+			
+			if (mid == search) {
+				System.out.println("Found " + mid);
+			} else if (mid < search) {
+				low = mid + 1;
+			} else {
+				low = mid - 1;
+			}
+			
 		}
 	}
 }
